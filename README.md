@@ -1,0 +1,3 @@
+# PLANIT
+
+The timetable maker
