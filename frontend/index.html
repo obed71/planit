@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="th-3742989678.jpg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>planit</title>
+  </head>
+  <body>
+    <div id="app">
+      <form id="form">
+        <h1>Add new Activity !</h1>
+        <div id="fill">
+          <label for="name">Activity Name</label>
+          <input type="text" id="name" required />
+          <div id="fill-time">
+            <label for="from">Activity Starts At</label>
+            <label for="to">Activity Ends At</label>
+            <input type="time" id="from" required />
+            <input type="time" id="to" required />
+          </div>
+          <button type="submit">Add Activity</button>
+        </div>
+      </form>
+      <div id="activities"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

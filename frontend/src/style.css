@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('/roboto-v32-latin-regular.woff2');
+}
+
+@font-face {
+  font-family: 'roboto-bold';
+  src: url('/roboto-v32-latin-700.woff2');
+}
+
+:root {
+  --bg: whitesmoke;
+  --accent: blue;
+  --primary: black;
+}
+
+h1 {
+  font-family: 'roboto-bold', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--primary);
+}
+
+#app {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  height: 100vh;
+}
+
+#form {
+  background-color: #dadada61;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 0 3px #530bf0;
+  padding: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#form h1 {
+  text-align: center;
+  background-image: linear-gradient(to bottom right, red, blue);
+  font-size: 3rem;
+  background-clip: text;
+  color: transparent;
+}
+
+#fill {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: end;
+}
+
+#form input {
+  padding: 0.5rem;
+  border-color: transparent;
+  outline: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+#form input:focus {
+  border-color: var(--accent);
+}
+
+#form label {
+  font-size: 1.2rem;
+}
+
+#form button {
+  padding: 0.8rem;
+  color: var(--bg);
+  background-image: linear-gradient(to right, red, #17178ade, #17178ade);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.25s;
+}
+
+#form button:hover {
+  opacity: 0.75;
+}
+
+#fill-time {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#fill-time label {
+  text-align: center;
+}
+
+#activities {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#activities:has(#no-data) {
+  justify-content: center;
+}
+
+#no-data {
+  padding: 1rem;
+  background-color: rebeccapurple;
+  color: blanchedalmond;
+  font-size: 2rem;
+  border-radius: 8px;
+  width: 70%;
+  align-self: center;
+}
+
+#activities #no-data::selection {
+  background-color: blanchedalmond;
+  color: rebeccapurple;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  font-size: large;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.first-row {
+  background-color: #47006d;
+  color: var(--bg);
+  font-family: 'roboto-bold';
+  position: sticky;
+  top: 0;
+}
+
+.grid-child {
+  padding: 1rem;
+}
+
+.grid-child:not(.first-row) {
+  cursor: pointer;
+}
+
+.even {
+  background-color: #e4ccf1;
+}
